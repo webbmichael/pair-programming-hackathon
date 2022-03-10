@@ -6,14 +6,28 @@ import { Route, Switch, Link } from "react-router-dom";
 
 import Swipe from "./componenets/Swipe/Swipe";
 import Details from "./componenets/Details/Details";
+import { ClassNames } from "@emotion/react";
 
 function App() {
   return (
-    <>
-      <p>test</p>
+    <div className="App">
       <Header />
+      <Router>
+        <Switch>
+          <Route path="/chat"> Chat Page</Route>
+          <Route path="/"> Home Page</Route>
+          <Route path="/messeage"> Individual Chat Screen</Route>
+        </Switch>
+      </Router>
 
-      <Route
+      {/* Tinder Cards */}
+      {/* Buttons below Card */}
+
+      {/* Chat Screen */}
+
+      {/* Individual Chat Screen */}
+
+      {/* <Route
         path={"/"}
         exact
         render={(routerProps) => {
@@ -25,8 +39,8 @@ function App() {
         render={(routerProps) => {
           return <Swipe {...routerProps} />;
         }}
-      />
-    </>
+      /> */}
+    </div>
   );
 }
 
