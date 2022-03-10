@@ -13,9 +13,9 @@ export default class Header extends Component {
           <PersonOutlineIcon className="header__icon" />
         {/* </IconButton> */}
         <h4 className="header__logo">Dinder</h4>
-        {/* <IconButton> */}
-          <ForumIcon className="header__forum" />
-        {/* </IconButton> */}
+        <IconButton>
+          <ForumIcon className="header__icon" />
+        </IconButton>
       </div>
     );
   }
