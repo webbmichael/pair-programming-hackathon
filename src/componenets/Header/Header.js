@@ -2,20 +2,20 @@ import React, { Component } from "react";
 import { AccessAlarm, ThreeDRotation } from "@mui/icons-material";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import ForumIcon from "@mui/icons-material/Forum";
-import IconButton from "@mui/icons-material/IconButtton";
+// import IconButton from "@mui/icons-material/IconButtton";
 import "./Header.scss";
 
 export default class Header extends Component {
   render() {
     return (
       <div className="header">
-        <IconButton>
+        {/* <IconButton> */}
           <PersonOutlineIcon className="header__icon" />
-        </IconButton>
+        {/* </IconButton> */}
         <h4 className="header__logo">Dinder</h4>
-        <IconButton>
+        {/* <IconButton> */}
           <ForumIcon className="header__forum" />
-        </IconButton>
+        {/* </IconButton> */}
       </div>
     );
   }
