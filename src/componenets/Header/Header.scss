@@ -3,4 +3,5 @@
 .header {
   width: 100%;
   @include flex(row, space-between, center);
+  border-bottom: solid 1px lightblue;
 }
