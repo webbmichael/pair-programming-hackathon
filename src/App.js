@@ -1,31 +1,35 @@
 import React from "react";
 
 import Header from "./componenets/Header/Header";
-import { Redirect, Route, Switch } from "react-router-dom";
+// import {Link,  Redirect, Route, Switch } from "react-router-dom";
+import { Route, Switch, Link } from "react-router-dom";
+
 
 
 import Swipe from "./componenets/Swipe/Swipe";
+import Details from "./componenets/Details/Details";
+
+
 
 function App() {
   return (
+  
     <>
       
-      <Header    />
+      <Header/>
+
       <Route 
-          path={`/`}
+          path={"/"}
           exact
           render ={(routerProps)=>{
-            return <Login  {...routerProps}/>
-          }} />
+            return <Details    {...routerProps}/>
+       }}/>
           <Route 
-          path={`/swipe`}
+          path={"/swipe"}
           render ={(routerProps)=>{
             return <Swipe    {...routerProps}/>
        }}/>
-        
-      
-
-
+    
     </>
     
   );
