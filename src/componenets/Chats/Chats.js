@@ -8,8 +8,25 @@ function Chats() {
             name = "Mark"
             message = "you whats up"
             timestamp = "40 seconds ago"
-            profilepic=""
+            profilepic="src\assets"
+            />
+        <Chat 
+            name = "Mark"
+            message = "you whats up"
+            timestamp = "40 seconds ago"
+            profilepic="src\assets"
+            /><Chat 
+            name = "Mark"
+            message = "you whats up"
+            timestamp = "40 seconds ago"
+            profilepic="src\assets"
+            /><Chat 
+            name = "Mark"
+            message = "you whats up"
+            timestamp = "40 seconds ago"
+            profilepic="src\assets"
             />
         </div>
+        
 }
 export default Chats;

@@ -21,7 +21,7 @@ function DinderCard() {
 
   return (
     <div>
-      <h1>Dinder Cards</h1>
+      <h1>Tindev Cards</h1>
       <div className="TinderCardContainder">
         {people.map((person) => (
           <TinderCard

@@ -2,21 +2,43 @@ import React, { Component } from "react";
 import { AccessAlarm, ThreeDRotation } from "@mui/icons-material";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import ForumIcon from "@mui/icons-material/Forum";
-// import IconButton from "@mui/icons-material/IconButtton";
+import { IconButton } from '@mui/material';
 import "./Header.scss";
+import { Link } from "react-router-dom";
+import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 
-export default class Header extends Component {
-  render() {
-    return (
-      <div className="header">
-        {/* <IconButton> */}
-          <PersonOutlineIcon className="header__icon" />
-        {/* </IconButton> */}
-        <h4 className="header__logo">Dinder</h4>
+function Header(backButton) {
+  console.log(window)
+  return (
+    <div className="header">
+      {backButton==="/" ? (
         <IconButton>
-          <ForumIcon className="header__icon" />
+        {/* <IconButton onClick={() => window.location.replace("/chat")}> */}
+          <ArrowBackIosNewIcon className="header__icon" fontSize="large" />
         </IconButton>
-      </div>
-    );
-  }
+      ) : (
+        <IconButton>
+          <PersonOutlineIcon className="header__icon" fontSize="large" />
+        </IconButton>
+      )}
+                  <ArrowBackIosNewIcon className="header__icon" fontSize="large" />
+
+
+
+      <Link to="/">
+        <img
+          className="header__logo"
+          src="https://apprecs.org/ios/images/app-icons/256/dc/1097224412.jpg"
+          alt="tinder logo"
+        />
+      </Link>
+
+      <Link to="/c">
+        <IconButton>
+          <ForumIcon className="header__icon" fontSize="large" />
+        </IconButton>
+      </Link>
+    </div>
+  );
 }
+export default Header;
