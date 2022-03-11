@@ -4,19 +4,35 @@ import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import ForumIcon from "@mui/icons-material/Forum";
 import IconButton from "@mui/icons-material/IconButtton";
 import "./Header.scss";
+import { Link, useHistory } from "react-router-dom";
+import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 
-export default class Header extends Component {
-  render() {
-    return (
-      <div className="header">
-        <IconButton>
-          <PersonOutlineIcon className="header__icon" />
+function Header(backButton) {
+  return (
+    <div className="header">
+      {backButton ? (
+        <IconButton onClick={() => history.replace}>
+          <ArrowBackIosNewIcon className="header__icon" fontSize="large" />
         </IconButton>
-        <h4 className="header__logo">Dinder</h4>
+      ) : (
         <IconButton>
-          <ForumIcon className="header__icon" />
+          <PersonOutlineIcon className="header__icon" fontSize="large" />
         </IconButton>
-      </div>
-    );
-  }
+      )}
+
+      <Link to="/">
+        <img
+          className="header__logo"
+          src="https://apprecs.org/ios/images/app-icons/256/dc/1097224412.jpg"
+          alt="tinder logo"
+        />
+      </Link>
+
+      <Link to="/chat">
+        <IconButton>
+          <ForumIcon className="header__icon" fontSize="large" />
+        </IconButton>
+      </Link>
+    </div>
+  );
 }

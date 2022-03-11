@@ -2,7 +2,7 @@ import React from "react";
 import "./SwipeButtons.scss";
 import ReplayIcon from "@mui/icons-material/Replay";
 import CloseIcon from "@mui/icons-material/Close";
-import CloseIcon from "@mui/icons-material/StarRate";
+import StarIcon from "@mui/icons-material/StarRate";
 import Favorite from "@mui/icons-material/Favorite";
 import FlashOnIcon from "@mui/icons-material/FlashOn";
 import IconButton from "@mui/icons-material/IconButtton";
@@ -11,19 +11,19 @@ function SwipeButtons() {
   return (
     <div className="swipeButtons">
       <h1>Buttons go here</h1>
-      <IconButton>
-        <ReplayIcon fontSize="large" />
+      <IconButton className="swipeButtons__repeat">
+        <ReplayIcon fontSize="large" c />
       </IconButton>
-      <IconButton>
+      <IconButton className="swipeButtons__left">
         <CloseIcon fontSize="large" />
       </IconButton>
-      <IconButton>
-        <CloseIcon fontSize="large" />
+      <IconButton className="swipeButtons__star">
+        <StarIcon fontSize="large" />
       </IconButton>
-      <IconButton>
+      <IconButton className="swipeButtons__right">
         <Favorite fontSize="large" />
       </IconButton>
-      <IconButton>
+      <IconButton className="swipeButtons__lightning">
         <FlashOnIcon fontSize="large" />
       </IconButton>
     </div>
