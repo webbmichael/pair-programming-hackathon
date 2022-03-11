@@ -6,6 +6,7 @@ import TinderCard from "./componenets/TinderCards/TinderCard";
 import SwipeButtons from "./componenets/swipeButtons/SwipeButtons";
 import Details from "./componenets/Details/Details";
 import { ClassNames } from "@emotion/react";
+import Chats from "./componenets/Chats/Chats";
 
 function App() {
   return (
@@ -14,12 +15,10 @@ function App() {
         <Switch>
           <Route path="/chat">
             <Header backButton="/" />
-
             <h1>Chat Page</h1>
           </Route>
           <Route path="/">
             <Header />
-
             <TinderCard />
             <SwipeButtons />
           </Route>
