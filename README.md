@@ -3,6 +3,15 @@
 npm install --save react-tinder-card
 npm install @mui/material @emotion/react @emotion/styled
 
+1:32:14 firebase (api data for array of profiles)
+1:38 collection of people (firebase/database)
+
+Work completed (need to push ):
+
+- Links added to header
+- Swipebutton Component added
+- back button function added to chat page (on header)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

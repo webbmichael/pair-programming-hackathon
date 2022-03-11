@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import TinderCard from "react-tinder-card";
 import "./DinderCard.scss";
 
@@ -18,6 +18,18 @@ function DinderCard() {
       url: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gettyimages-944363520-1523442806.jpg",
     },
   ]);
+  // React hook to connet to data of people
+  useEffect(() => {
+    // this is where code will run...
+    const unsubscribe = database.collection("people").onSnapshot(
+      (snapshot) => setPeople(snapshot.doc.map((doc) => doc.data())) // function is for firebase data ** need to iterate
+    );
+
+    return () => {
+      // this is the clean up...
+      unsubscribe();
+    };
+  }, [people]);
 
   return (
     <div>

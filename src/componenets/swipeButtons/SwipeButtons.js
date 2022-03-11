@@ -5,7 +5,12 @@ import CloseIcon from "@mui/icons-material/Close";
 import StarIcon from "@mui/icons-material/StarRate";
 import Favorite from "@mui/icons-material/Favorite";
 import FlashOnIcon from "@mui/icons-material/FlashOn";
+<<<<<<< HEAD
 import { IconButton } from '@mui/material';
+=======
+import IconButton from "@mui/icons-material/IconButtton";
+
+>>>>>>> 44b46c0d3482a9185c7c525136f563ac022b5474
 function SwipeButtons() {
   return (
     <div className="swipeButtons">
